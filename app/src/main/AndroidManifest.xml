@@ -17,6 +17,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".SaudacaoActivity" />
+
+        <activity android:name=".SaudacaoImplicitaActivity">
+            <intent-filter>
+                <action android:name=
+                    "br.edu.usj.helloandroid.acao_saudacao" />
+                <category android:name=
+                    "br.edu.usj.helloandroid.categoria_saudacao" />
+                <category android:name=
+                    "android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
