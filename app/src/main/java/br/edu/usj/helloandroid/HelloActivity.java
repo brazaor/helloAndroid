@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by rafael on 16/08/17.
@@ -23,7 +24,38 @@ public class HelloActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_hello);
         texto = (EditText) findViewById(R.id.nomeEditText);
+        Toast t = Toast.makeText(this, "estado create", Toast.LENGTH_LONG);
+        t.show();
         //resultado = (TextView) findViewById(R.id.saudacaoTextView);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast t = Toast.makeText(this, "estado start", Toast.LENGTH_LONG);
+        t.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast t = Toast.makeText(this, "estado resume", Toast.LENGTH_LONG);
+        t.show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast t = Toast.makeText(this, "estado stop", Toast.LENGTH_LONG);
+        t.show();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast t = Toast.makeText(this, "estado destroy", Toast.LENGTH_LONG);
+        t.show();
     }
 
     public void saudar(View view){
